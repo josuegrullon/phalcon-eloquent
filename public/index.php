@@ -1,4 +1,5 @@
 <?php
+use Illuminate\Database\Capsule\Manager as Capsule;
 
 error_reporting(E_ALL);
 
@@ -7,7 +8,26 @@ try {
 	/**
 	 * Read the configuration
 	 */
+	require_once __DIR__ . '/../vendor/autoload.php';
+
 	$config = require __DIR__ . "/../app/config/config.php";
+
+	//ELOQUENT CONF
+	$capsule = new Capsule; 
+
+	$capsule->addConnection(array(
+	    'driver'    => $config->database->driver,
+	    'host'      => $config->database->host,
+	    'database'  => $config->database->database,
+	    'username'  => $config->database->username,
+	    'password'  => $config->database->password,
+	    'charset'   => $config->database->charset,
+	    'collation' => $config->database->collation,
+	    'prefix'    => $config->database->prefix
+	));
+
+	$capsule->bootEloquent();
+	//END ELOQUENT CONF
 
 	/**
 	 * Include loader

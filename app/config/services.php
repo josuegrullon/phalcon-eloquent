@@ -1,5 +1,7 @@
 <?php
 
+use Phalcon\Mvc\Dispatcher;
+
 /**
  * The FactoryDefault Dependency Injector automatically register the right services providing a full stack framework
  */
@@ -21,6 +23,13 @@ $di->set('view', function() use ($config) {
 	$view = new \Phalcon\Mvc\View();
 	$view->setViewsDir($config->application->viewsDir);
 	return $view;
+});
+
+// Registering a dispatcher
+$di->set('dispatcher', function () {
+    $dispatcher = new Dispatcher();
+    $dispatcher->setDefaultNamespace("App\Controllers");
+    return $dispatcher;
 });
 
 /**

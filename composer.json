@@ -1,0 +1,13 @@
+{
+    "name": "root/phalcon-eloquent",
+    "authors": [
+        {
+            "name": "Josue Grullon",
+            "email": "josue@mctekk.com"
+        }
+    ],
+    "require": {
+    	"illuminate/database": "*",
+        "vlucas/phpdotenv": "1.1.*@dev"
+    }
+}
