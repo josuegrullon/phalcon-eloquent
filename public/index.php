@@ -16,7 +16,7 @@ try {
 	$capsule = new Capsule; 
 
 	$capsule->addConnection(
-		include_once __DIR__.'/../app/config/database.php'
+		include_once __DIR__.'/../app/config/eloquent.php'
 	);
 
 	$capsule->bootEloquent();
