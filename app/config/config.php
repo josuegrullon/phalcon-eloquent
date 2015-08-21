@@ -4,14 +4,11 @@ Dotenv::load(__DIR__.'/../../');
 
 return new \Phalcon\Config(array(
 	'database' => array(
-		'driver'    => 'mysql',
-	    'host'      => getenv('DBHOST'),
-	    'database'  => getenv('DB'),
-	    'username'  => getenv('DBUSER'),
-	    'password'  => getenv('DBPASS'),
-	    'charset'   => 'utf8',
-	    'collation' => 'utf8_unicode_ci',
-	    'prefix'    => ''
+		'adapter'     => 'Mysql',   
+        'host'        => '',
+        'username'    => '',
+        'password'    => '',
+        'dbname'      => ''
 	),
 	'application' => array(
 		'controllersDir' => __DIR__ . '/../../app/controllers/',

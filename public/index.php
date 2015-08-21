@@ -15,16 +15,9 @@ try {
 	//ELOQUENT CONF
 	$capsule = new Capsule; 
 
-	$capsule->addConnection(array(
-	    'driver'    => $config->database->driver,
-	    'host'      => $config->database->host,
-	    'database'  => $config->database->database,
-	    'username'  => $config->database->username,
-	    'password'  => $config->database->password,
-	    'charset'   => $config->database->charset,
-	    'collation' => $config->database->collation,
-	    'prefix'    => $config->database->prefix
-	));
+	$capsule->addConnection(
+		include_once __DIR__.'/../app/config/database.php'
+	);
 
 	$capsule->bootEloquent();
 	//END ELOQUENT CONF
