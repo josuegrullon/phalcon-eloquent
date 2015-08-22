@@ -8,5 +8,3 @@ class Ciudad extends Capsule
    protected $table = 'ciudad';
 
 }
-
- ?>

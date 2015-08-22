@@ -1,9 +1,8 @@
-<?php 
+<?php
 Dotenv::load(__DIR__.'/../../');
 
 #Eloquent database conection
-return [
-		
+return [		
 		'driver'    => 'mysql',
 	    'host'      => getenv('DBHOST'),
 	    'database'  => getenv('DB'),
@@ -12,10 +11,4 @@ return [
 	    'charset'   => 'utf8',
 	    'collation' => 'utf8_unicode_ci',
 	    'prefix'    => ''
-	
 ];
-
-
-
-
- ?>
