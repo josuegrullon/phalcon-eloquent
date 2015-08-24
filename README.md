@@ -1,1 +1,1 @@
-Skeleton for a Phalcon single module application
+# Phalcon skeleton with eloquent integration.
