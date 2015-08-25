@@ -1,4 +1,4 @@
-# Phalcon skeleton with eloquent integration.
+# Phalcon single-module skeleton with eloquent integration.
 
 ##Installation
 
